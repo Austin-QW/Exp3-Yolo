@@ -4,10 +4,10 @@ import random
 import shutil
 
 # XML文件目录和图片文件目录
-xml_dir = '/workspace/Exp3/Annotations'  # 替换为你XML文件的目录
-img_dir = '/workspace/Exp3/images'  # 替换为图片文件的目录
+xml_dir = '/content/Exp3-Yolo/Annotations'  # 替换为你XML文件的目录
+img_dir = '/content/Exp3-Yolo/images'  # 替换为图片文件的目录
 # 输出目录
-output_base_dir = '/workspace/Exp3'
+output_base_dir = '/content/Exp3-Yolo'
 train_label_dir = os.path.join(output_base_dir, 'train/labels')
 val_label_dir = os.path.join(output_base_dir, 'val/labels')
 test_label_dir = os.path.join(output_base_dir, 'test/labels')
@@ -21,6 +21,9 @@ for dir_path in [train_label_dir, val_label_dir, test_label_dir, train_image_dir
 
 # 列出所有XML文件
 xml_files = [f for f in os.listdir(xml_dir) if f.endswith('.xml')]
+
+# 设置随机种子
+random.seed(42)  # 这里设定一个固定的种子，使得划分结果可以复现
 
 # 划分比例
 train_ratio = 0.7
