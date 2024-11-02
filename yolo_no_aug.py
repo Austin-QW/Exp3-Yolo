@@ -4,11 +4,11 @@ from wandb.integration.ultralytics import add_wandb_callback
 
 wandb.init(project="exp3",name = "exp3-yolo-no-aug-3")
 # Load a pretrained model
-model = YOLO("yolov8n.pt")
+model = YOLO("yolov11n.pt")
 # Add Weights & Biases callback for Ultralytics
 add_wandb_callback(model, enable_model_checkpointing=True)
 # Train the model on the custom dataset with augmentations
-model.train(data="my_dataset_no_aug.yaml", epochs=5, imgsz=640, 
+model.train(data="/content/Exp3-Yolo/my_dataset_no_aug.yaml", epochs=5, imgsz=640, 
     hsv_h=0.0,
     hsv_s=0.0, 
     hsv_v=0.0,
