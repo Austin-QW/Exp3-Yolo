@@ -1,0 +1,9 @@
+
+train: './dataset/train/images' # train images 
+val: './dataset/val/images' # val images 
+test: './dataset/test/images'
+
+# Classes
+names:
+  0: equation
+
