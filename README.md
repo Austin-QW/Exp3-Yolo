@@ -8,3 +8,4 @@
 1.	通过代码处理的方式对数据集中的图片进行旋转，扭曲等几何失真（opencv库中图像处理仿射变换等算子）仿真，以模仿真实场景的拍摄失真。
 2.	基于YOLO-OBB模型在增强后的数据集上进行模型微调训练，在实验内容中给出预处理前后不同模型在测试集上的性能对比。
 
+![napkin-selection](https://github.com/user-attachments/assets/bac1491d-1737-4c98-bce3-7d41897c897e)
